@@ -17,19 +17,35 @@ This Python program securely manages website passwords. It encrypts credentials,
     * Purpose: Guides the user through the sign-up process (creating username, setting master password, storing verification key).
     * Parameters: None
     * Returns: None (prints confirmation message and launches main menu)
+
+* **kdf(master_password, salt_type)**
+* Purpose: Derives a strong encryption key from the master password using a Key Derivation Function (KDF) with added salt.
+* Parameters:
+    * `master_password:` The user's master password.
+    * `salt_type:` String specifying the type of salt to be used.
+* Returns: The derived encryption key (bytes)
+
+* **insert_into_master(username, verification_key)**
+* Purpose: Inserts a new user record into the "master" table, storing the username and verification key derived from the master password.
+* Parameters:
+    * `username:` The user's chosen username.
+    * `verification_key:` The KDF-derived key used for verification during sign-in.
+* Returns: None (data is inserted into the database)
+
 * **sign_in()**
     * Purpose: Prompts the user for username and master password, verifies them, derives encryption/decryption key.
     * Parameters: None
     * Returns: None (launches program menu on successful verification)
 
-**3. verification(username, verification_key, encryption_key)**
 
+**3. verification(username, verification_key, encryption_key)**
 * **Purpose:** Verifies user credentials during sign-in against stored information.
 * **Parameters:**
     * `username`: Username entered during sign-in.
     * `verification_key`: Verification key derived from user's master password.
     * `encryption_key`: Encryption/decryption key derived from master password.
 * **Returns:** None (prints message indicating successful verification or invalid credentials, launches program menu on success)
+
 
 **4. program_menu(mt_username, enc_dec_key)**
 
@@ -39,6 +55,7 @@ This Python program securely manages website passwords. It encrypts credentials,
     * `enc_dec_key`: Encryption/Decryption key derived from the master password.
 * **Returns:** None
 
+
 **5. (Function chosen based on user selection from program_menu)**
 
 * **add_credentials(mt_username, enc_dec_key)**
@@ -47,36 +64,42 @@ This Python program securely manages website passwords. It encrypts credentials,
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None (prints confirmation message)
+
 * **delete_credentials(mt_username, enc_dec_key)**
     * Purpose: Deletes credentials for a specific website.
     * Parameters:
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None (prints confirmation message)
+
 * **update_credentials(mt_username, enc_dec_key)**
     * Purpose: Updates the password for a specific website after encrypting the new password.
     * Parameters:
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None (prints confirmation message)
+
 * **view_credentials(mt_username, enc_dec_key)**
     * Purpose: Retrieves and decrypts all stored credentials, displaying them for a limited time.
     * Parameters:
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None (credentials are displayed)
+
 * **website_login_page(mt_username, enc_dec_key)**
     * Purpose: Retrieves website URL, opens it in the browser, decrypts and copies password to clipboard (limited time).
     * Parameters:
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None
+
 * **password_generator(mt_username, enc_dec_key)** 
     * Purpose: Generates a random password based on user-specified criteria.
     * Parameters:
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
     * Returns: None (generated password is displayed and offered for addition to password manager)
+
 * **analyze_password_strength(mt_username, enc_dec_key, password_to_check)** (Not currently used in menu selection)
     * Purpose: Analyzes the strength of a given password.
     * Parameters:
