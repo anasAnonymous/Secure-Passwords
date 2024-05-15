@@ -11,7 +11,7 @@ This Python program securely manages website passwords. It encrypts credentials,
 * **Parameters:** None
 * **Returns:** None (exits the program)
 
-`* **sign_up()**`
+### `sign_up()`
     * Purpose: Guides the user through the sign-up process (creating username, setting master password, storing verification key).
     * Parameters: None
     * Returns: None (prints confirmation message and launches main menu)
