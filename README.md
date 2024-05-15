@@ -7,9 +7,9 @@ This Python program securely manages website passwords. It encrypts credentials,
 
 ### `main()`
 
-* **Purpose:** The program's entry point. Initializes the database (commented out for subsequent runs), presents the sign-up/sign-in menu, and handles user interaction based on their choice.
-* **Parameters:** None
-* **Returns:** None (exits the program)
+- **Purpose:** The program's entry point. Initializes the database (commented out for subsequent runs), presents the sign-up/sign-in menu, and handles user interaction based on their choice.
+- **Parameters:** None
+- **Returns:** None (exits the program)
 
 ### `sign_up()`
     * Purpose: Guides the user through the sign-up process (creating username, setting master password, storing verification key).
