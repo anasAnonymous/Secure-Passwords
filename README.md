@@ -99,3 +99,4 @@ This Python program securely manages website passwords. It encrypts credentials,
 - **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
+- **Returns:** String indicating password strength ("Weak", "Medium", "Strong")
