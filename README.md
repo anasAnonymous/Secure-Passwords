@@ -12,52 +12,52 @@ This Python program securely manages website passwords. It encrypts credentials,
 - **Returns:** None (exits the program)
 
 ### `sign_up()`
-    * Purpose: Guides the user through the sign-up process (creating username, setting master password, storing verification key).
-    * Parameters: None
-    * Returns: None (prints confirmation message and launches main menu)
+- **Purpose**: Guides the user through the sign-up process (creating username, setting master password, storing verification key).
+- **Parameters**: None
+- **Returns**: None (prints confirmation message and launches main menu)
 
 ### `kdf(master_password, salt_type)`
-* Purpose: Derives a strong encryption key from the master password using a Key Derivation Function (KDF) with added salt.
-* Parameters:
+- **Purpose:** Derives a strong encryption key from the master password using a Key Derivation Function (KDF) with added salt.
+- **Parameters:**
     * `master_password:` The user's master password.
     * `salt_type:` String specifying the type of salt to be used.
-* Returns: The derived encryption key (bytes)
+- **Returns:** The derived encryption key (bytes)
 
 ### `insert_into_master(username, verification_key)`
-* Purpose: Inserts a new user record into the "master" table, storing the username and verification key derived from the master password.
-* Parameters:
+- **Purpose:** Inserts a new user record into the "master" table, storing the username and verification key derived from the master password.
+- **Parameters:**
     * `username:` The user's chosen username.
     * `verification_key:` The KDF-derived key used for verification during sign-in.
-* Returns: None (data is inserted into the database)
+- **Returns:** None (data is inserted into the database)
 
 ### `sign_in()`
-    * Purpose: Prompts the user for username and master password, verifies them, derives encryption/decryption key.
-    * Parameters: None
-    * Returns: None (launches program menu on successful verification)
+- **Purpose:** Prompts the user for username and master password, verifies them, derives encryption/decryption key.
+- **Parameters:** None
+- **Returns:** None (launches program menu on successful verification)
 
 
 ### `verification(username, verification_key, encryption_key)`
-* **Purpose:** Verifies user credentials during sign-in against stored information.
-* **Parameters:**
+- **Purpose:** Verifies user credentials during sign-in against stored information.
+- **Parameters:**
     * `username`: Username entered during sign-in.
     * `verification_key`: Verification key derived from user's master password.
     * `encryption_key`: Encryption/decryption key derived from master password.
-* **Returns:** None (prints message indicating successful verification or invalid credentials, launches program menu on success)
+- **Returns:** None (prints message indicating successful verification or invalid credentials, launches program menu on success)
 
 
 ### `program_menu(mt_username, enc_dec_key)`
-* **Purpose:** Presents the main menu with options for managing credentials.
-* **Parameters:**
+- **Purpose:** Presents the main menu with options for managing credentials.
+- **Parameters:**
     * `mt_username`: Master username for the current session.
     * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-* **Returns:** None
+- **Returns:** None
 
 ### `add_credentials(mt_username, enc_dec_key)`
-    * Purpose: Adds new website credentials after encrypting the password.
-    * Parameters:
+- **Purpose:** Adds new website credentials after encrypting the password.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None (prints confirmation message)
+- **Returns:** None (prints confirmation message)
 
 ### `delete_credentials(mt_username, enc_dec_key)`
     * Purpose: Deletes credentials for a specific website.
