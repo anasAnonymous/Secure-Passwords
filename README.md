@@ -60,42 +60,42 @@ This Python program securely manages website passwords. It encrypts credentials,
 - **Returns:** None (prints confirmation message)
 
 ### `delete_credentials(mt_username, enc_dec_key)`
-    * Purpose: Deletes credentials for a specific website.
-    * Parameters:
+- **Purpose:** Deletes credentials for a specific website.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None (prints confirmation message)
+- **Returns:** None (prints confirmation message)
 
 ### `update_credentials(mt_username, enc_dec_key)`
-    * Purpose: Updates the password for a specific website after encrypting the new password.
-    * Parameters:
+- **Purpose:** Updates the password for a specific website after encrypting the new password.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None (prints confirmation message)
+- **Returns:** None (prints confirmation message)
 
 ### `view_credentials(mt_username, enc_dec_key)`
-    * Purpose: Retrieves and decrypts all stored credentials, displaying them for a limited time.
-    * Parameters:
+- **Purpose:** Retrieves and decrypts all stored credentials, displaying them for a limited time.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None (credentials are displayed)
+- **Returns:** None (credentials are displayed)
 
 ### `website_login_page(mt_username, enc_dec_key)`
-    * Purpose: Retrieves website URL, opens it in the browser, decrypts and copies password to clipboard (limited time).
-    * Parameters:
+- **Purpose:** Retrieves website URL, opens it in the browser, decrypts and copies password to clipboard (limited time).
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None
+- **Returns:** None
 
 ### `password_generator(mt_username, enc_dec_key)`
-    * Purpose: Generates a random password based on user-specified criteria.
-    * Parameters:
+- **Purpose:** Generates a random password based on user-specified criteria.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
-    * Returns: None (generated password is displayed and offered for addition to password manager)
+- **Returns:** None (generated password is displayed and offered for addition to password manager)
 
 ### `analyze_password_strength(mt_username, enc_dec_key, password_to_check)`
-    * Purpose: Analyzes the strength of a given password.
-    * Parameters:
+- **Purpose:** Analyzes the strength of a given password.
+- **Parameters:**
         * `mt_username`: Master username for the current session.
         * `enc_dec_key`: Encryption/Decryption key derived from the master password.
