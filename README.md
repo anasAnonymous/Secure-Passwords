@@ -55,8 +55,8 @@ This Python program securely manages website passwords. It encrypts credentials,
 ### `add_credentials(mt_username, enc_dec_key)`
 - **Purpose:** Adds new website credentials after encrypting the password.
 - **Parameters:**
-        * `mt_username`: Master username for the current session.
-        * `enc_dec_key`: Encryption/Decryption key derived from the master password.
+   * `mt_username`: Master username for the current session.
+   * `enc_dec_key`: Encryption/Decryption key derived from the master password.
 - **Returns:** None (prints confirmation message)
 
 ### `delete_credentials(mt_username, enc_dec_key)`
